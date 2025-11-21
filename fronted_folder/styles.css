@@ -1,101 +1,109 @@
-/* Основные стили для приложения КонтрЗакупки */
+/* Стили для фона устанавливаются через код, здесь оставляем только стили для виджетов */
+
 QWidget {
-    background-color: #ffffff;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 14px;
-    color: #333333;
+    background-color: transparent; /* Прозрачный фон для виджетов */
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 15px;
+    color: #202945;
 }
 
 QLabel {
     font-weight: 600;
-    font-size: 15px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #2c3e50;
+    font-size: 35px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    color: rgba(123, 193, 255, 1);
+    background-color: rgba(0, 0, 0, 0); 
+    padding: 2px 5px;
+    border-radius: 3px;
+    
 }
 
 QComboBox {
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #ffffff;
-    min-height: 20px;
-    margin-bottom: 8px;
+    border: 0px solid #d2d7e1;
+    border-radius: 21px;
+    padding: 30px 12px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 1);
+    color: rgba(123, 193, 255, 1);
+    min-width: 250px;
+    max-width: 350px;
+    height: 40px;
 }
-
-QComboBox::drop-down {
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-    width: 20px;
-    border-left-width: 1px;
-    border-left-color: #bdc3c7;
-    border-left-style: solid;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
-QComboBox::down-arrow {
-    image: none;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 5px solid #7f8c8d;
-    width: 0px;
-    height: 0px;
-}
-
 QComboBox QAbstractItemView {
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    background-color: white;
-    selection-background-color: #3498db;
-    selection-color: white;
+    background: rgba(0, 0, 0, 1); /* или любой другой цвет, который вы хотите */
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    outline: 0; /* Убирает пунктирную рамку вокруг выбранного элемента */
 }
+
 
 QLineEdit {
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #ffffff;
+    border: 3px solid #d2d7e1;
+    border-radius: 21px;
+    padding: 30px 12px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0);
     margin-bottom: 8px;
-}
-
-QLineEdit:focus {
-    border-color: #3498db;
-    background-color: #f8f9fa;
+    color: white; 
+    font-weight: bold;
 }
 
 QPushButton {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    padding: 10px 0px;
-    margin-top: 10px;
-    font-weight: 600;
+    background: rgba(123, 193, 255, 0);
+    color: #fff;
+    border: 3px solid rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    font-size: 55px;
+    padding: 30px 12px;
+    margin-top: 8px;
+    font-weight: 700;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 21px;
 }
 
 QPushButton:hover {
-    background-color: #2980b9;
+    background: 3px solid rgba(0, 0, 0, 0);
 }
 
-QPushButton:pressed {
-    background-color: #21618c;
+QPushButton#searchButton {
+    background: rgba(123, 193, 255, 1);
+    color: #fff;
+    border: 0px solid rgba(255, 255, 255, 1);
+    border-radius: 1px;
+    font-size: 30px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    font-weight: 700;
+    min-width: 255px;
+    max-width: 355px;
+    border-radius: 21px;
 }
 
-/* Стиль для QMessageBox */
-QMessageBox {
-    background-color: white;
+QCheckBox {
+    font-size: 14px;
+    margin: 5px 0;
+    color: rgba(123, 193, 255, 1);
+    background-color: rgba(0, 0, 0, 0); /* Полупрозрачный фон для лучшей читаемости */
+    padding: 2px 5px;
+    font-size: 30px;
+    border-radius: 3px;
 }
 
-QMessageBox QLabel {
-    font-weight: normal;
-    margin: 0px;
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
 }
 
-QMessageBox QPushButton {
-    min-width: 80px;
-    padding: 6px 12px;
+QCheckBox::indicator:unchecked {
+    border: 3px solid #d2d7e1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+    border: 0px solid #0057b7;
+    background: rgba(0, 87, 183, 0.8);
+    border-radius: 8px;
 }
